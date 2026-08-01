@@ -1,11 +1,11 @@
-import Header from './components/Header';
-import TaskSection from './components/TaskSection';
+import AppHeader from './components/Header';
+import TaskSection from './components/tasks/TaskSection';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <>
-      <Header />
+      <AppHeader />
       <TaskSection />
       <Footer />
     </>
