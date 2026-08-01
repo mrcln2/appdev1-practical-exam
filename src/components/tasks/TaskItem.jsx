@@ -12,7 +12,7 @@ function TaskItem({ task, description }) {
 
   return (
     <>
-      <article>
+      <article className="task-card">
         <h3>{task}</h3>
 
         <p>{description}</p>

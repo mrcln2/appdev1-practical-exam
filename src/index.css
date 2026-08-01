@@ -9,37 +9,44 @@ body {
   color: #222;
 }
 
-header {
-  padding: 30px;
-  text-align: center;
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header,
+.page-main,
+.page-footer {
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header {
   background-color: #222;
   color: white;
 }
 
-main {
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 20px;
+.page-main {
+  flex: 1;
 }
 
-article {
+.page-footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.task-card {
   padding: 20px;
   background-color: white;
   border-radius: 8px;
-}
-
-article h3 {
-  margin-top: 0;
-}
-
-hr {
-  margin: 20px 0;
-  border: 0;
-  border-top: 1px solid #ccc;
-}
-
-footer {
-  padding: 20px;
-  text-align: center;
-  color: #666;
 }

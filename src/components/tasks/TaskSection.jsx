@@ -3,27 +3,29 @@ import TaskDivider from './TaskDivider';
 
 function TaskSection() {
   return (
-    <main>
+    <main className="page-main">
       <h2>My Tasks</h2>
 
-      <TaskItem
-        task="Finish Practical Exam"
-        description="Complete the required tasks for the practical exam."
-      />
+      <div className="task-list">
+        <TaskItem
+          task="Finish Practical Exam"
+          description="Complete the required tasks for the practical exam."
+        />
 
-      <TaskDivider />
+        <TaskDivider />
 
-      <TaskItem
-        task="Review React Components"
-        description="Study component nesting, props, and reusable components."
-      />
+        <TaskItem
+          task="Review React Components"
+          description="Study component nesting, props, and reusable components."
+        />
 
-      <TaskDivider />
+        <TaskDivider />
 
-      <TaskItem
-        task="Organize Project Files"
-        description="Make sure all project files are properly organized."
-      />
+        <TaskItem
+          task="Organize Project Files"
+          description="Make sure all project files are properly organized."
+        />
+      </div>
     </main>
   );
 }
