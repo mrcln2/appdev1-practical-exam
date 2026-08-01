@@ -1,12 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Color Palette - Light Theme (Default) */
+  --bg-body-solid: #f1f5f9;
+  --bg-body-gradient-1: rgba(224, 242, 254, 0.7);
+  --bg-body-gradient-2: rgba(238, 242, 255, 0.7);
+  
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --bg-glass-header: rgba(255, 255, 255, 0.8);
+  --bg-glass-footer: rgba(255, 255, 255, 0.8);
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  
+  --accent-cyan: #0284c7;
+  --accent-purple: #6366f1;
+  --accent-pink: #d946ef;
+  
+  --border-color: rgba(203, 213, 225, 0.6);
+  --border-hover: rgba(99, 102, 241, 0.4);
+  --card-glow-edge: rgba(2, 132, 199, 0.15);
+  
+  --card-shadow: 0 10px 30px -5px rgba(148, 163, 184, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  --card-hover-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.25), 0 0 20px rgba(2, 132, 199, 0.15);
+  
+  --badge-owner-bg: rgba(2, 132, 199, 0.08);
+  --badge-owner-text: #0284c7;
+  --badge-owner-border: rgba(2, 132, 199, 0.2);
+  
+  --chip-bg: rgba(241, 245, 249, 0.8);
+  --chip-text: #475569;
+  --chip-border: rgba(203, 213, 225, 0.5);
+  
+  --status-not-completed-bg: rgba(245, 158, 11, 0.1);
+  --status-not-completed-text: #b45309;
+  --status-not-completed-border: rgba(245, 158, 11, 0.3);
+  --status-dot: #f59e0b;
+  
+  --tag-bg: rgba(248, 250, 252, 0.9);
+  --tag-text: #475569;
+  --tag-border: rgba(226, 232, 240, 0.8);
+
+  --divider-color: rgba(99, 102, 241, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Color Palette - Futuristic Dark Theme */
+    --bg-body-solid: #090d16;
+    --bg-body-gradient-1: rgba(0, 240, 255, 0.06);
+    --bg-body-gradient-2: rgba(112, 0, 255, 0.08);
+    
+    --bg-card: rgba(15, 23, 42, 0.7);
+    --bg-card-hover: rgba(23, 32, 54, 0.85);
+    --bg-glass-header: rgba(11, 15, 25, 0.85);
+    --bg-glass-footer: rgba(11, 15, 25, 0.85);
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    
+    --accent-cyan: #00f0ff;
+    --accent-purple: #a855f7;
+    --accent-pink: #ff007f;
+    
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(0, 240, 255, 0.4);
+    --card-glow-edge: rgba(0, 240, 255, 0.2);
+    
+    --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    --card-hover-shadow: 0 20px 45px -10px rgba(0, 240, 255, 0.2), 0 0 25px rgba(0, 240, 255, 0.15);
+    
+    --badge-owner-bg: rgba(0, 240, 255, 0.1);
+    --badge-owner-text: #00f0ff;
+    --badge-owner-border: rgba(0, 240, 255, 0.3);
+    
+    --chip-bg: rgba(30, 41, 59, 0.7);
+    --chip-text: #cbd5e1;
+    --chip-border: rgba(255, 255, 255, 0.1);
+    
+    --status-not-completed-bg: rgba(251, 191, 36, 0.12);
+    --status-not-completed-text: #fbbf24;
+    --status-not-completed-border: rgba(251, 191, 36, 0.3);
+    --status-dot: #fbbf24;
+    
+    --tag-bg: rgba(30, 41, 59, 0.6);
+    --tag-text: #94a3b8;
+    --tag-border: rgba(255, 255, 255, 0.08);
+
+    --divider-color: rgba(0, 240, 255, 0.2);
+  }
+}
+
+[data-theme="dark"] {
+  --bg-body-solid: #090d16;
+  --bg-body-gradient-1: rgba(0, 240, 255, 0.06);
+  --bg-body-gradient-2: rgba(112, 0, 255, 0.08);
+  --bg-card: rgba(15, 23, 42, 0.7);
+  --bg-card-hover: rgba(23, 32, 54, 0.85);
+  --bg-glass-header: rgba(11, 15, 25, 0.85);
+  --bg-glass-footer: rgba(11, 15, 25, 0.85);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-cyan: #00f0ff;
+  --accent-purple: #a855f7;
+  --accent-pink: #ff007f;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(0, 240, 255, 0.4);
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  --card-hover-shadow: 0 20px 45px -10px rgba(0, 240, 255, 0.2), 0 0 25px rgba(0, 240, 255, 0.15);
+  --badge-owner-bg: rgba(0, 240, 255, 0.1);
+  --badge-owner-text: #00f0ff;
+  --badge-owner-border: rgba(0, 240, 255, 0.3);
+  --chip-bg: rgba(30, 41, 59, 0.7);
+  --chip-text: #cbd5e1;
+  --chip-border: rgba(255, 255, 255, 0.1);
+  --status-not-completed-bg: rgba(251, 191, 36, 0.12);
+  --status-not-completed-text: #fbbf24;
+  --status-not-completed-border: rgba(251, 191, 36, 0.3);
+  --status-dot: #fbbf24;
+  --tag-bg: rgba(30, 41, 59, 0.6);
+  --tag-text: #94a3b8;
+  --tag-border: rgba(255, 255, 255, 0.08);
+  --divider-color: rgba(0, 240, 255, 0.2);
+}
+
+[data-theme="light"] {
+  --bg-body-solid: #f1f5f9;
+  --bg-body-gradient-1: rgba(224, 242, 254, 0.7);
+  --bg-body-gradient-2: rgba(238, 242, 255, 0.7);
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --bg-glass-header: rgba(255, 255, 255, 0.8);
+  --bg-glass-footer: rgba(255, 255, 255, 0.8);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-cyan: #0284c7;
+  --accent-purple: #6366f1;
+  --accent-pink: #d946ef;
+  --border-color: rgba(203, 213, 225, 0.6);
+  --border-hover: rgba(99, 102, 241, 0.4);
+  --card-shadow: 0 10px 30px -5px rgba(148, 163, 184, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  --card-hover-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.25), 0 0 20px rgba(2, 132, 199, 0.15);
+  --badge-owner-bg: rgba(2, 132, 199, 0.08);
+  --badge-owner-text: #0284c7;
+  --badge-owner-border: rgba(2, 132, 199, 0.2);
+  --chip-bg: rgba(241, 245, 249, 0.8);
+  --chip-text: #475569;
+  --chip-border: rgba(203, 213, 225, 0.5);
+  --status-not-completed-bg: rgba(245, 158, 11, 0.1);
+  --status-not-completed-text: #b45309;
+  --status-not-completed-border: rgba(245, 158, 11, 0.3);
+  --status-dot: #f59e0b;
+  --tag-bg: rgba(248, 250, 252, 0.9);
+  --tag-text: #475569;
+  --tag-border: rgba(226, 232, 240, 0.8);
+  --divider-color: rgba(99, 102, 241, 0.2);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-body-solid);
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 20% -10%, var(--bg-body-gradient-1), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, var(--bg-body-gradient-2), transparent 70%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .page {
@@ -19,22 +191,68 @@ body {
 .page-main,
 .page-footer {
   width: 100%;
-  padding: 20px;
 }
 
 .page-header {
-  background-color: #222;
-  color: white;
+  background-color: var(--bg-glass-header);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
 .page-main {
   flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.page-main h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-main h2::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 24px;
+  background: linear-gradient(180deg, var(--accent-cyan), var(--accent-purple));
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--accent-cyan);
 }
 
 .page-footer {
-  background-color: #222;
-  color: white;
+  background-color: var(--bg-glass-footer);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
   text-align: center;
+  padding: 28px 24px;
+  margin-top: auto;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.page-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .task-list {
@@ -45,8 +263,199 @@ body {
   margin: 0 auto;
 }
 
+/* Encouragement Message between task items */
+.task-list > p {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent-purple);
+  margin: -4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
+
+.task-list > p::before,
+.task-list > p::after {
+  content: '✦';
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  opacity: 0.7;
+}
+
+/* Task Divider */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--divider-color), transparent);
+  margin: 4px 0;
+}
+
+/* Task Card Component */
 .task-card {
-  padding: 20px;
-  background-color: white;
+  padding: 28px;
+  background-color: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              background-color 0.3s ease;
+}
+
+.task-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-4px) scale(1.005);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--border-hover);
+  background-color: var(--bg-card-hover);
+}
+
+.task-card:hover::before {
+  opacity: 1;
+}
+
+.task-card h3 {
+  margin: 0 0 10px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.task-card:hover h3 {
+  color: var(--accent-cyan);
+}
+
+.task-card p:nth-of-type(1) {
+  margin: 0 0 20px 0;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* Owner Tag ("Marclean's Task") */
+.task-card p:nth-of-type(2) {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 8px 14px 0;
+  padding: 4px 12px;
+  background: var(--badge-owner-bg);
+  color: var(--badge-owner-text);
+  border: 1px solid var(--badge-owner-border);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Task Number */
+.task-card p:nth-of-type(3) {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 8px 14px 0;
+  padding: 4px 12px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border: 1px solid var(--chip-border);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Completion Status */
+.task-card p:nth-of-type(4) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px 0;
+  padding: 4px 14px;
+  background: var(--status-not-completed-bg);
+  color: var(--status-not-completed-text);
+  border: 1px solid var(--status-not-completed-border);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.task-card p:nth-of-type(4)::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--status-dot);
+  box-shadow: 0 0 8px var(--status-dot);
+}
+
+/* Category & Status Small Tags */
+.task-card small {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--tag-text);
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  padding: 5px 12px;
   border-radius: 8px;
+  margin-top: 4px;
+  margin-right: 8px;
+  transition: all 0.25s ease;
+}
+
+.task-card small:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  transform: translateY(-1px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .page-main {
+    padding: 24px 16px;
+  }
+  
+  .page-header,
+  .page-footer {
+    padding: 16px;
+  }
+  
+  .task-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+  
+  .task-card h3 {
+    font-size: 1.15rem;
+  }
+  
+  .page-main h2 {
+    font-size: 1.35rem;
+    margin-bottom: 24px;
+  }
 }
