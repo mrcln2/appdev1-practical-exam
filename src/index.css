@@ -5,4 +5,41 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+header {
+  padding: 30px;
+  text-align: center;
+  background-color: #222;
+  color: white;
+}
+
+main {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+article {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+article h3 {
+  margin-top: 0;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #666;
 }

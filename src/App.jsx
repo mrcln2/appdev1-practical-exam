@@ -1,9 +1,14 @@
+import Header from './components/Header';
+import TaskSection from './components/TaskSection';
+import Footer from './components/Footer';
+
 function App() {
   return (
-    <div>
-      <h1>mrclnDo</h1>
-      <p>My Personal Task and Reminder App</p>
-    </div>
+    <>
+      <Header />
+      <TaskSection />
+      <Footer />
+    </>
   );
 }
 
